@@ -1,0 +1,6 @@
+\\apporto.com\dfs\ASU\Users\a19018_asu\Desktop\UtilityServicesPortal\UtilityWeb\SecurityLib\bin\Debug\SecurityLib.dll
+\\apporto.com\dfs\ASU\Users\a19018_asu\Desktop\UtilityServicesPortal\UtilityWeb\SecurityLib\bin\Debug\SecurityLib.pdb
+\\apporto.com\dfs\ASU\Users\a19018_asu\Desktop\UtilityServicesPortal\UtilityWeb\SecurityLib\obj\Debug\SecurityLib.csproj.AssemblyReference.cache
+\\apporto.com\dfs\ASU\Users\a19018_asu\Desktop\UtilityServicesPortal\UtilityWeb\SecurityLib\obj\Debug\SecurityLib.csproj.CoreCompileInputs.cache
+\\apporto.com\dfs\ASU\Users\a19018_asu\Desktop\UtilityServicesPortal\UtilityWeb\SecurityLib\obj\Debug\SecurityLib.dll
+\\apporto.com\dfs\ASU\Users\a19018_asu\Desktop\UtilityServicesPortal\UtilityWeb\SecurityLib\obj\Debug\SecurityLib.pdb
