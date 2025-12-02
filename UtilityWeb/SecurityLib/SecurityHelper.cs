@@ -22,6 +22,8 @@ namespace SecurityLib
             if (string.IsNullOrEmpty(input))
                 return string.Empty;
 
+            input = input.Trim();
+
             using (SHA256 sha256 = SHA256.Create())
             {
                 byte[] bytes = Encoding.UTF8.GetBytes(input);

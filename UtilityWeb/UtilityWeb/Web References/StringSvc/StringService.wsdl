@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="reverseString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reverseStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reverseStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="toUpperCase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="toUpperCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="toUpperCaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="toLowerCase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="toLowerCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="toLowerCaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLength">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLengthResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="reverseStringSoapIn">
+    <wsdl:part name="parameters" element="tns:reverseString" />
+  </wsdl:message>
+  <wsdl:message name="reverseStringSoapOut">
+    <wsdl:part name="parameters" element="tns:reverseStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="toUpperCaseSoapIn">
+    <wsdl:part name="parameters" element="tns:toUpperCase" />
+  </wsdl:message>
+  <wsdl:message name="toUpperCaseSoapOut">
+    <wsdl:part name="parameters" element="tns:toUpperCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="toLowerCaseSoapIn">
+    <wsdl:part name="parameters" element="tns:toLowerCase" />
+  </wsdl:message>
+  <wsdl:message name="toLowerCaseSoapOut">
+    <wsdl:part name="parameters" element="tns:toLowerCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLength" />
+  </wsdl:message>
+  <wsdl:message name="GetLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLengthResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StringServiceSoap">
+    <wsdl:operation name="reverseString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reverse the string input</wsdl:documentation>
+      <wsdl:input message="tns:reverseStringSoapIn" />
+      <wsdl:output message="tns:reverseStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="toUpperCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Convert input to uppercase</wsdl:documentation>
+      <wsdl:input message="tns:toUpperCaseSoapIn" />
+      <wsdl:output message="tns:toUpperCaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="toLowerCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Convert input to lowercase</wsdl:documentation>
+      <wsdl:input message="tns:toLowerCaseSoapIn" />
+      <wsdl:output message="tns:toLowerCaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLength">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return length of input string</wsdl:documentation>
+      <wsdl:input message="tns:GetLengthSoapIn" />
+      <wsdl:output message="tns:GetLengthSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StringServiceSoap" type="tns:StringServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="reverseString">
+      <soap:operation soapAction="http://tempuri.org/reverseString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toUpperCase">
+      <soap:operation soapAction="http://tempuri.org/toUpperCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toLowerCase">
+      <soap:operation soapAction="http://tempuri.org/toLowerCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLength">
+      <soap:operation soapAction="http://tempuri.org/GetLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StringServiceSoap12" type="tns:StringServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="reverseString">
+      <soap12:operation soapAction="http://tempuri.org/reverseString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toUpperCase">
+      <soap12:operation soapAction="http://tempuri.org/toUpperCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="toLowerCase">
+      <soap12:operation soapAction="http://tempuri.org/toLowerCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLength">
+      <soap12:operation soapAction="http://tempuri.org/GetLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StringService">
+    <wsdl:port name="StringServiceSoap" binding="tns:StringServiceSoap">
+      <soap:address location="https://localhost:44330/StringService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StringServiceSoap12" binding="tns:StringServiceSoap12">
+      <soap12:address location="https://localhost:44330/StringService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

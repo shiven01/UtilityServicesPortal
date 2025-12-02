@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34729.46
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityWeb", "UtilityWeb\UtilityWeb.csproj", "{E305B6B8-B8EF-4405-8CE5-39ED34BC281D}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -11,6 +11,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityLib", "SecurityLib\SecurityLib.csproj", "{5CEAF6D2-61BE-49D0-953F-2A8528F3F98D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorService", "CalculatorService\CalculatorService.csproj", "{E3BAA94E-3166-491A-85D7-FA464BA17C1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringService", "..\..\CSE445\Assignment 5\StringService\StringService\StringService.csproj", "{9B36C79A-E485-4DB2-B202-B0FAAAB290BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{E3BAA94E-3166-491A-85D7-FA464BA17C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3BAA94E-3166-491A-85D7-FA464BA17C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3BAA94E-3166-491A-85D7-FA464BA17C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B36C79A-E485-4DB2-B202-B0FAAAB290BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B36C79A-E485-4DB2-B202-B0FAAAB290BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B36C79A-E485-4DB2-B202-B0FAAAB290BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B36C79A-E485-4DB2-B202-B0FAAAB290BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

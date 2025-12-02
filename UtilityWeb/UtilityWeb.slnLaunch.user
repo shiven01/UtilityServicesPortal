@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "UtilityWeb\\UtilityWeb.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\..\\CSE445\\Assignment 5\\StringService\\StringService\\StringService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "CalculatorService\\CalculatorService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
